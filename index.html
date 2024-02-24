@@ -5,26 +5,127 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My First HTML Page</title>
     <style>
-        /* CSS styles can be added here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        /* Reset styles */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 20px 0;
             text-align: center;
         }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header nav {
+            margin-top: 10px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #ddd;
+        }
+
+        /* Main content styles */
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 0 20px;
         }
-        h1 {
-            color: #333;
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1em;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header nav {
+                margin-top: 20px;
+            }
+
+            header nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            ul {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
@@ -32,23 +133,37 @@
 
 <header>
     <h1>Welcome to My Website</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <div class="container">
-    <h2>About Me</h2>
-    <p>Hi! my name is John Vincent A. Parba.</p>
-    <p>This is my start how to become a Developer.</p>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hi! I'm John Vincent A. Parba. This is my start of how to become a Developer.</p>
+    </section>
 
-    <h2>My Hobbies</h2>
-    <ul>
-        <li>Traveling</li>
-        <li>Reading Books</li>
-        <li>Programming</li>
-    </ul>
+    <section id="hobbies">
+        <h2>My Hobbies</h2>
+        <ul>
+            <li>Traveling</li>
+            <li>Reading</li>
+            <li>Programming</li>
+        </ul>
+    </section>
 
-    <h2>Contact Me</h2>
-    <p>Email: parbajohn30@gmail.com</p>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: example@example.com</p>
+    </section>
 </div>
+
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
